@@ -453,3 +453,383 @@ nav ul li a.active, nav ul li a:hover {
         height: 420px;
     }
 }
+
+/* ========================================================== */
+/* --- ATUALIZAÇÃO 2026: novas seções, hero e bio --- */
+/* (o CSS original acima foi mantido; aqui só entra o novo)  */
+/* ========================================================== */
+
+html { scroll-behavior: smooth; }
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #00bfff;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .globo { animation: none; }
+}
+
+/* ---------- Hero ---------- */
+.hero-content {
+    flex: 0 1 58%;
+}
+
+.hero-content h1 { font-size: 44px; }
+.hero-content h2 { font-size: 34px; }
+
+.hero-content p {
+    max-width: 560px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid #00bfff;
+    color: #00bfff;
+}
+
+.btn-outline:hover {
+    background-color: rgba(0, 191, 255, 0.12);
+}
+
+.btn-touch {
+    transition: background-color 0.2s ease;
+}
+
+/* ---------- Sobre mim ---------- */
+.about-content p {
+    margin: 0 0 16px 0;
+    max-width: 620px;
+}
+
+.about-facts {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 20px;
+    margin: 28px 0 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.about-facts dt {
+    color: #00bfff;
+    font-weight: 500;
+}
+
+.about-facts dd {
+    margin: 0;
+    color: #ccd6f6;
+}
+
+/* ---------- Estrutura das seções novas ---------- */
+.section {
+    padding: 70px 0 10px;
+}
+
+.section-head {
+    margin-bottom: 36px;
+}
+
+.section-head h2 {
+    font-size: 36px;
+    color: #fff;
+    margin: 10px 0 0 0;
+    line-height: 1.2;
+}
+
+.section-head p {
+    margin: 12px 0 0 0;
+    max-width: 620px;
+    line-height: 1.6;
+    color: #a8b2d1;
+}
+
+/* ---------- Experiência ---------- */
+.exp-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.exp-card {
+    background-color: #051f4d;
+    border: 1px solid #1e3a5f;
+    border-left: 3px solid #00bfff;
+    border-radius: 12px;
+    padding: 28px;
+}
+
+.exp-card.is-past {
+    border-left-color: #3a5a80;
+}
+
+.exp-tag {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #00bfff;
+}
+
+.exp-card h3 {
+    font-size: 22px;
+    color: #fff;
+    margin: 8px 0 16px 0;
+}
+
+.exp-card ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #ccd6f6;
+}
+
+.exp-card li + li {
+    margin-top: 10px;
+}
+
+/* ---------- Tecnologias ---------- */
+.stack-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 36px;
+}
+
+.stack-group h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 12px 0;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chips li {
+    padding: 6px 12px;
+    border: 1px solid #1e3a5f;
+    border-radius: 999px;
+    background-color: rgba(5, 31, 77, 0.55);
+    font-size: 13px;
+    line-height: 1.4;
+    color: #ccd6f6;
+}
+
+.chips.is-key li {
+    border-color: #00bfff;
+    color: #fff;
+}
+
+.chips.is-learning li {
+    border-style: dashed;
+    color: #a8b2d1;
+}
+
+/* ---------- Projeto de IA (card novo no carrossel) ---------- */
+.swiper-slide .card-visual {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 50% 30%, #0a2f6b 0%, #04163a 70%);
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+.card-visual svg {
+    width: 82%;
+    height: 90%;
+}
+
+.card-ai .card-content {
+    overflow-y: auto;
+}
+
+/* ---------- Certificações e conquistas ---------- */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.cert-card {
+    background-color: #051f4d;
+    border: 1px solid #1e3a5f;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.cert-issuer {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #00bfff;
+}
+
+.cert-card h3 {
+    font-size: 18px;
+    line-height: 1.35;
+    color: #fff;
+    margin: 8px 0 0 0;
+}
+
+.cert-card p {
+    margin: 12px 0 0 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #a8b2d1;
+}
+
+.cert-more {
+    margin-top: 40px;
+}
+
+.cert-more h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 0 12px 0;
+}
+
+.awards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 56px;
+}
+
+.award {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.award-rank {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    color: #00bfff;
+    min-width: 64px;
+}
+
+.award h3 {
+    font-size: 18px;
+    color: #fff;
+    margin: 0 0 8px 0;
+}
+
+.award p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #a8b2d1;
+}
+
+.text-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #00bfff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 191, 255, 0.4);
+}
+
+.text-link:hover {
+    border-bottom-color: #00bfff;
+}
+
+/* ---------- Contato e rodapé ---------- */
+.contact {
+    text-align: center;
+    padding: 110px 0 50px;
+}
+
+.contact h2 {
+    font-size: 36px;
+    color: #fff;
+    margin: 10px 0 12px 0;
+}
+
+.contact p {
+    margin: 0 auto 28px;
+    max-width: 480px;
+    line-height: 1.6;
+    color: #a8b2d1;
+}
+
+.contact .hero-actions {
+    justify-content: center;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 30px 0 40px;
+    border-top: 1px solid #0d1f33;
+    color: #8892b0;
+}
+
+/* ---------- Responsivo das partes novas ---------- */
+@media (max-width: 1024px) {
+    .hero-content { flex: 1; }
+    .hero-actions { justify-content: center; }
+
+    .exp-grid { grid-template-columns: 1fr; }
+    .stack-grid { grid-template-columns: repeat(2, 1fr); }
+    .about-facts { text-align: left; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .about-content p { margin-left: auto; margin-right: auto; }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 32px; }
+    .hero-content h2 { font-size: 24px; }
+
+    .section { padding-top: 50px; }
+    .section-head h2,
+    .contact h2 { font-size: 28px; }
+
+    .cert-grid,
+    .awards { grid-template-columns: 1fr; }
+
+    .card-ai .card-content { padding: 16px; }
+    .card-ai .card-content h3 { font-size: 18px; }
+    .card-ai .card-content p { font-size: 13px; line-height: 1.45; }
+}
+
+@media (max-width: 560px) {
+    .stack-grid { grid-template-columns: 1fr; }
+    .exp-card { padding: 22px; }
+}
+
+
+/* ---------- Textos justificados ---------- */
+.hero-content p,
+.about-content p,
+.exp-card li,
+.cert-card p,
+.award p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+/* no tablet o topo é centralizado: a última linha acompanha */
+@media (max-width: 1024px) {
+    .hero-content p {
+        text-align-last: center;
+    }
+}
